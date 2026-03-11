@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portfolio de Nacho Carretero Pascual, artista 3D y FX especializado en Houdini y Blender para cine, animación y publicidad." />
+  <title>Nacho Carretero Pascual | Portfolio 3D & FX</title>
+  <style>
+    :root {
+      --bg: #0b0d12;
+      --bg-elev: #101520;
+      --card: #151b28;
+      --text: #f2f4f8;
+      --muted: #a8b0bf;
+      --line: #2a3244;
+      --brand: #73c4ff;
+      --brand-strong: #3ca9f5;
+      --ok: #73ffa4;
+      --radius: 14px;
+      --shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      font-family: Inter, Arial, Helvetica, sans-serif;
+      background: radial-gradient(circle at top right, #172033 0%, var(--bg) 38%);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    a { color: var(--brand); text-decoration: none; }
+    a:hover { color: var(--brand-strong); }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      backdrop-filter: blur(8px);
+      background: rgba(10, 13, 20, 0.72);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .topbar .container {
+      min-height: 64px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand {
+      font-weight: 700;
+      letter-spacing: 0.2px;
+      color: white;
+    }
+
+    nav {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      font-size: 0.95rem;
+    }
+
+    .hero {
+      padding: 88px 0 70px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.3fr 1fr;
+      gap: 30px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      color: var(--ok);
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 1.4px;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(2rem, 4vw, 3.1rem);
+      line-height: 1.1;
+    }
+
+    .subtitle {
+      margin: 18px 0 26px;
+      color: var(--muted);
+      max-width: 60ch;
+    }
+
+    .cta {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 18px;
+      border-radius: 10px;
+      font-weight: 700;
+      border: 1px solid transparent;
+      transition: 0.2s ease;
+    }
+
+    .btn-primary {
+      background: linear-gradient(90deg, #5cbcf9, #379ce9);
+      color: #081018;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 8px 20px rgba(60, 169, 245, 0.45);
+      color: #081018;
+    }
+
+    .btn-secondary {
+      border-color: var(--line);
+      color: var(--text);
+      background: rgba(255, 255, 255, 0.02);
+    }
+
+    .btn-secondary:hover {
+      border-color: var(--brand);
+      color: var(--brand);
+    }
+
+    .hero-card {
+      background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0));
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 18px;
+      box-shadow: var(--shadow);
+    }
+
+    .hero-card img {
+      width: 100%;
+      border-radius: 10px;
+      object-fit: cover;
+      aspect-ratio: 4 / 5;
+      background: #1f2635;
+    }
+
+    section {
+      padding: 68px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    h2 {
+      margin: 0 0 20px;
+      font-size: clamp(1.45rem, 3vw, 2rem);
+    }
+
+    .lead {
+      margin-top: 0;
+      color: var(--muted);
+      max-width: 70ch;
+    }
+
+    .project {
+      margin-top: 24px;
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 22px;
+    }
+
+    .project h3 {
+      margin-top: 0;
+      margin-bottom: 12px;
+    }
+
+    .project p {
+      margin: 0;
+      color: #d8deea;
+    }
+
+    .video {
+      margin-top: 18px;
+      aspect-ratio: 16/9;
+      border-radius: 10px;
+      overflow: hidden;
+      border: 1px solid #303a50;
+      background: #0d131d;
+    }
+
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 18px;
+      margin-top: 24px;
+    }
+
+    .gallery img {
+      width: 100%;
+      border-radius: 10px;
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow);
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+      background: #1b2332;
+    }
+
+    .about {
+      display: grid;
+      grid-template-columns: 220px 1fr;
+      gap: 26px;
+      align-items: start;
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 22px;
+    }
+
+    .about img {
+      width: 100%;
+      border-radius: 10px;
+      object-fit: cover;
+      aspect-ratio: 4 / 5;
+      background: #1b2332;
+    }
+
+    footer {
+      text-align: center;
+      padding: 44px 20px;
+      color: var(--muted);
+    }
+
+    @media (max-width: 900px) {
+      .hero-grid,
+      .about {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        padding-top: 66px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="container">
+      <a class="brand" href="#inicio">Nacho Carretero Pascual</a>
+      <nav aria-label="Principal">
+        <a href="#trabajos">Trabajos 3D</a>
+        <a href="#blender">Blender</a>
+        <a href="#video">Vídeo</a>
+        <a href="#sobre-mi">Sobre mí</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="inicio">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <p class="eyebrow">Portfolio 2026 · Artista 3D y FX</p>
+          <h1>Houdini + Blender para proyectos de animación con acabado cinematográfico.</h1>
+          <p class="subtitle">
+            Soy Nacho Carretero Pascual, artista 3D y FX en Valencia. Desarrollo simulaciones,
+            lookdev y piezas visuales para cortos, videoclips y contenido digital orientado a estudio.
+          </p>
+          <div class="cta">
+            <a class="btn btn-primary" href="#trabajos">Ver trabajos destacados</a>
+            <a class="btn btn-secondary" href="mailto:nachocarretero10@gmail.com">Contactar por email</a>
+          </div>
+        </div>
+        <aside class="hero-card" aria-label="Foto de perfil">
+          <img src="imagenes/foto.jpg" alt="Retrato de Nacho Carretero Pascual" loading="lazy" />
+        </aside>
+      </div>
+    </section>
+
+    <section id="trabajos">
+      <div class="container">
+        <h2>Trabajos 3D</h2>
+        <p class="lead">Selección de piezas recientes enfocadas en simulación FX, dirección visual y composición.</p>
+
+        <article class="project">
+          <h3>FX Houdini | FLIP · Pyro · Vellum | Composición en Nuke</h3>
+          <p>
+            Proyecto personal de FX en Houdini, compuesto en Nuke. FLIP para el río, Pyro para hoguera y viento con niebla,
+            y Vellum para la tienda. Río procedural y rocas mediante scattering.
+          </p>
+          <div class="video">
+            <iframe src="https://player.vimeo.com/video/1049300960" title="Proyecto FX en Houdini" loading="lazy" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+          </div>
+        </article>
+
+        <article class="project">
+          <h3>Contribuciones FX Houdini — El pájaro fantasma</h3>
+          <p>
+            Aportaciones en el corto animado de VisualNoobs: simulaciones de bandadas de pájaros, dinámicas para riendas,
+            ropajes, banderas y simulaciones de fuego.
+          </p>
+        </article>
+
+        <article class="project">
+          <h3>Visualizer musical 3D</h3>
+          <p>
+            Dirección de arte y trabajo 3D en Blender para la canción “Impredecible” de Martínez.
+            Edición de vídeo para el contenido mostrado en tablet y uso de Geometry Nodes para el contador.
+          </p>
+          <div class="video">
+            <iframe src="https://www.youtube.com/embed/PpAT6E_8b9o" title="Visualizer musical 3D" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="blender">
+      <div class="container">
+        <h2>Proyectos personales en Blender</h2>
+        <p class="lead">Modelado, shading y composición de piezas personales para reforzar lenguaje visual y detalle técnico.</p>
+        <div class="gallery" role="list">
+          <img src="imagenes/daxter.jpg" alt="Render 3D del personaje Daxter" loading="lazy" role="listitem" />
+          <img src="imagenes/baston.jpg" alt="Render 3D de bastón" loading="lazy" role="listitem" />
+          <img src="imagenes/amplificador.jpg" alt="Render 3D de amplificador" loading="lazy" role="listitem" />
+          <img src="imagenes/lava.jpg" alt="Escena 3D con lava" loading="lazy" role="listitem" />
+        </div>
+      </div>
+    </section>
+
+    <section id="video">
+      <div class="container">
+        <h2>Dirección, grabación y edición de vídeo</h2>
+        <p class="lead">Trabajo audiovisual complementario para campañas y videoclips.</p>
+        <div class="project">
+          <div class="video">
+            <iframe src="https://www.youtube.com/embed/VIDEO1" title="Proyecto de dirección y edición 1" loading="lazy" allowfullscreen></iframe>
+          </div>
+          <div class="video">
+            <iframe src="https://www.youtube.com/embed/VIDEO2" title="Proyecto de dirección y edición 2" loading="lazy" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="sobre-mi">
+      <div class="container">
+        <h2>Sobre mí</h2>
+        <article class="about">
+          <img src="imagenes/foto.jpg" alt="Foto de perfil de Nacho" loading="lazy" />
+          <div>
+            <p>
+              Soy estudiante de Valencia y apasionado del mundo audiovisual en todas sus formas.
+              Actualmente me especializo en Houdini y Blender, con especial interés en nuevas tecnologías
+              y creación de efectos visuales.
+            </p>
+            <p>
+              También he realizado trabajos de dirección, grabación y edición para videoclips,
+              además de proyectos fotográficos. Mi objetivo es integrarme en la industria del 3D y FX,
+              aportando soluciones visuales sólidas y una evolución constante en cada proyecto.
+            </p>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer id="contacto">
+    <p>
+      Contacto:
+      <a href="mailto:nachocarretero10@gmail.com">nachocarretero10@gmail.com</a>
+      · Valencia, España
+    </p>
+  </footer>
+</body>
+</html>
