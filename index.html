@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portfolio de VFX — Composición, 3D, Houdini, Nuke y trabajo de cámara." />
+  <title>NACHO CARRETERO — VFX Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="grain"></div>
+  <div class="scanlines"></div>
+
+  <header class="nav">
+    <a href="#top" class="logo">
+      <span class="logo-mark">◢◣</span>
+      <span class="logo-text">NACHO<span>/VFX</span></span>
+    </a>
+    <nav>
+      <a href="#reel">Reel</a>
+      <a href="#work">Proyectos</a>
+      <a href="#stack">Software</a>
+      <a href="#about">Sobre mí</a>
+      <a href="#contact" class="cta">Contacto</a>
+    </nav>
+    <button class="burger" aria-label="Menú">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <main id="top">
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-bg">
+        <div class="hero-gradient"></div>
+      </div>
+      <div class="hero-content">
+        <p class="kicker"><span class="dot"></span> SHOWREEL 2026 · DISPONIBLE FREELANCE</p>
+        <h1 class="hero-title">
+          <span class="line">VISUAL</span>
+          <span class="line outline">EFFECTS</span>
+          <span class="line">ARTIST.</span>
+        </h1>
+        <p class="hero-sub">
+          Composición digital, 3D y simulaciones para cine, publicidad y contenido digital.
+          Hago que lo imposible parezca rodado.
+        </p>
+        <div class="hero-actions">
+          <a href="#reel" class="btn btn-primary">▶ Ver Showreel</a>
+          <a href="#work" class="btn btn-ghost">Explorar proyectos</a>
+        </div>
+        <div class="hero-meta">
+          <div><strong>+50</strong><span>Planos entregados</span></div>
+          <div><strong>12</strong><span>Producciones</span></div>
+          <div><strong>4</strong><span>Años de experiencia</span></div>
+        </div>
+      </div>
+      <div class="hero-scroll"><span></span> SCROLL</div>
+    </section>
+
+    <!-- REEL -->
+    <section id="reel" class="section reel">
+      <div class="section-head">
+        <p class="kicker">// 01 — SHOWREEL</p>
+        <h2>Lo último que he hecho arder, romper o romper la realidad.</h2>
+      </div>
+      <div class="reel-frame">
+        <div class="reel-overlay">
+          <button class="play" aria-label="Reproducir showreel">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+          </button>
+          <p>SHOWREEL · 02:14 · 4K</p>
+        </div>
+        <div class="reel-bars"><i></i><i></i><i></i><i></i></div>
+      </div>
+    </section>
+
+    <!-- WORK -->
+    <section id="work" class="section work">
+      <div class="section-head">
+        <p class="kicker">// 02 — PROYECTOS SELECCIONADOS</p>
+        <h2>Casos recientes.</h2>
+      </div>
+
+      <div class="work-grid">
+        <article class="card" style="--accent:#ff4d2e">
+          <div class="card-media"><div class="ph ph-1"></div></div>
+          <div class="card-body">
+            <p class="tag">SPOT · 2025</p>
+            <h3>NEBULA / Coche Eléctrico</h3>
+            <p>Integración 3D del vehículo en placas reales, FX de partículas y grading.</p>
+            <ul class="chips"><li>Houdini</li><li>Nuke</li><li>Redshift</li></ul>
+          </div>
+        </article>
+
+        <article class="card" style="--accent:#2ee0ff">
+          <div class="card-media"><div class="ph ph-2"></div></div>
+          <div class="card-body">
+            <p class="tag">CORTOMETRAJE · 2025</p>
+            <h3>SILENCE / Criatura submarina</h3>
+            <p>Creature FX, simulación de fluidos y composición multi-pase.</p>
+            <ul class="chips"><li>Maya</li><li>Houdini</li><li>Nuke</li></ul>
+          </div>
+        </article>
+
+        <article class="card" style="--accent:#b95cff">
+          <div class="card-media"><div class="ph ph-3"></div></div>
+          <div class="card-body">
+            <p class="tag">VIDEOCLIP · 2024</p>
+            <h3>LOW ORBIT / Set extension</h3>
+            <p>Matte painting, tracking 3D y limpieza de placas en exteriores nocturnos.</p>
+            <ul class="chips"><li>Nuke</li><li>Mocha</li><li>Photoshop</li></ul>
+          </div>
+        </article>
+
+        <article class="card" style="--accent:#ffd23e">
+          <div class="card-media"><div class="ph ph-4"></div></div>
+          <div class="card-body">
+            <p class="tag">FILM · 2024</p>
+            <h3>EMBERS / Explosión digital</h3>
+            <p>Pyro FX, destrucción procedural y comp final en 4K.</p>
+            <ul class="chips"><li>Houdini</li><li>Nuke</li><li>After Effects</li></ul>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- STACK -->
+    <section id="stack" class="section stack">
+      <div class="section-head">
+        <p class="kicker">// 03 — STACK TÉCNICO</p>
+        <h2>Herramientas con las que vivo a diario.</h2>
+      </div>
+      <ul class="stack-list">
+        <li><span>01</span> Nuke <em>Comp / Roto / Tracking</em></li>
+        <li><span>02</span> Houdini <em>FX / Simulación</em></li>
+        <li><span>03</span> Maya <em>Modelado / Animación</em></li>
+        <li><span>04</span> Redshift <em>Render</em></li>
+        <li><span>05</span> DaVinci Resolve <em>Color</em></li>
+        <li><span>06</span> After Effects <em>Motion / Comp ligera</em></li>
+      </ul>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section about">
+      <div class="about-grid">
+        <div class="about-photo">
+          <div class="ph ph-portrait"></div>
+        </div>
+        <div class="about-text">
+          <p class="kicker">// 04 — SOBRE MÍ</p>
+          <h2>Hola, soy Nacho.</h2>
+          <p>
+            Llevo cuatro años trabajando en VFX entre Madrid y proyectos remotos para
+            estudios de Europa. Me apasiona el momento exacto en el que un plano deja
+            de parecer un efecto y empieza a parecer real.
+          </p>
+          <p>
+            Mi enfoque combina rigor técnico — pipelines, tracking limpio, render
+            eficiente — con una mirada cinematográfica. Si tu proyecto necesita
+            magia que no se note, hablamos.
+          </p>
+          <a href="#contact" class="btn btn-primary">Trabajemos juntos →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section contact">
+      <div class="contact-inner">
+        <p class="kicker">// 05 — CONTACTO</p>
+        <h2 class="contact-title">¿Tienes un plano imposible?</h2>
+        <a href="mailto:hola@nachocarretero.com" class="contact-mail">hola@nachocarretero.com</a>
+        <ul class="socials">
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">Vimeo</a></li>
+          <li><a href="#">LinkedIn</a></li>
+          <li><a href="#">ArtStation</a></li>
+        </ul>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p>© <span id="year"></span> Nacho Carretero — VFX Artist. Hecho con cariño y un poco de ruido.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
